@@ -1,27 +1,347 @@
-<section class="menu">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yume Sushi - Peça Online | Delivery Rápido e Delicioso</title>
+    <meta name="description" content="Yume Sushi: Delivery de sushis e combos frescos na Cidade Verde e região. Peça agora pelo WhatsApp e saboreie o melhor da culinária japonesa!">
+    <style>
+        :root {
+            --cor-primaria: #a52a2a; /* Vermelho escuro para destaque */
+            --cor-secundaria: #333; /* Cinza escuro para textos */
+            --cor-fundo: #f9f9f9; /* Fundo claro */
+            --cor-borda: #ddd;
+            --cor-sombra: rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: var(--cor-fundo);
+            color: var(--cor-secundaria);
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 5px var(--cor-sombra);
+        }
+
+        header img {
+            max-height: 90px;
+        }
+
+        .hero {
+            background: var(--cor-primaria);
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .hero strong {
+            display: block;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            margin: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 15px 20px;
+            border-radius: 999px;
+            flex: 1;
+            min-width: 150px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn.primary {
+            background: var(--cor-primaria);
+            color: #fff;
+        }
+        
+        .btn.secondary {
+            background: #444;
+            color: #fff;
+        }
+
+        .payment-options {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid var(--cor-borda);
+            border-bottom: 1px solid var(--cor-borda);
+            margin: 20px 0;
+            box-shadow: 0 2px 5px var(--cor-sombra);
+        }
+
+        .payment-options h2 {
+            margin-top: 0;
+            color: var(--cor-primaria);
+        }
+        
+        .payment-options .item-payment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        
+        .payment-options .item-payment span {
+            font-size: 20px;
+        }
+
+        .menu, .testimonials {
+            padding: 20px;
+        }
+
+        .menu h2, .testimonials h2 {
+            text-align: center;
+            color: var(--cor-primaria);
+            border-bottom: 2px solid var(--cor-borda);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .menu-grid {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px var(--cor-sombra);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-info {
+            padding: 20px;
+        }
+
+        .item-info h3 {
+            margin: 0 0 8px;
+            color: var(--cor-primaria);
+        }
+
+        .item-info p {
+            margin: 0 0 10px;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 22px;
+            color: var(--cor-secundaria);
+            margin-bottom: 15px;
+        }
+
+        .btn-whatsapp {
+            display: block;
+            text-align: center;
+            background: #25D366; /* Cor do WhatsApp */
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+
+        .upsell {
+            background: #fff3e0;
+            border: 1px dashed #ffb74d;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #8d6e63;
+        }
+
+        .testimonials {
+            background: #f0f0f0;
+            padding: 40px 20px;
+        }
+        
+        .testimonials blockquote {
+            background: #fff;
+            padding: 20px;
+            border-left: 5px solid var(--cor-primaria);
+            margin: 0 auto 20px;
+            max-width: 600px;
+            font-style: italic;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--cor-sombra);
+        }
+        
+        .testimonials blockquote cite {
+            display: block;
+            margin-top: 10px;
+            text-align: right;
+            font-weight: bold;
+            color: #777;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--cor-secundaria);
+            color: #fff;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/4AAD4C8B-CB1B-4CE1-A18C-8B6866D4EDB8.png" alt="Logo Yume Sushi, restaurante de sushi">
+</header>
+
+<section class="hero">
+    <strong>Horário de Funcionamento:</strong><br>
+    Todos os dias — 19h às 23h<br>
+    <strong>Taxa de Entrega:</strong><br>
+    Grátis para Cidade Verde e Cidade Oeste. Demais bairros R$ 5,00.
+</section>
+
+<div class="buttons-container">
+    <a href="tel:+5584991044358" class="btn primary">📞 Ligar Agora</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Yume+Sushi" target="_blank" class="btn secondary">📍 Ver no Mapa</a>
+</div>
+
+<section class="payment-options">
+    <h2>Formas de Pagamento Aceitas</h2>
+    <div class="item-payment"><span>✅</span> <p>Pix</p></div>
+    <div class="item-payment"><span>💳</span> <p>Cartão (Débito ou Crédito)</p></div>
+    <div class="item-payment"><span>💰</span> <p>Dinheiro</p></div>
+</section>
+
+<main class="menu">
     <h2>🍣 Combos Especiais</h2>
-    <div class="item">
-        <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/refs/heads/main/IMG_5470.jpeg" alt="Delicioso Combo Yume 12 com salmão e atum">
-        <div class="item-info">
-            <h3>Combo Yume 12 ✨</h3>
-            <p>4 uramakis atum, 4 hot rolls tilápia, 4 hossomakis kani</p>
-            <div class="price">R$ 18,00</div>
-            <a class="btn" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 12 por R$ 18,00." target="_blank">Pedir no WhatsApp</a>
-            <div class="upsell">
-                <p>💡 Recomendado: Adicione um Guaraná Antártica por apenas R$ 8!</p>
+    <div class="menu-grid">
+
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/refs/heads/main/IMG_5470.jpeg" alt="Combo Yume 12: 4 uramakis atum, 4 hot rolls tilápia, 4 hossomakis kani">
+            <div class="item-info">
+                <h3>Combo Yume 12</h3>
+                <p>4 uramakis de atum, 4 hot rolls de tilápia, 4 hossomakis de kani</p>
+                <div class="price">R$ 18,00</div>
+                <a class="btn-whatsapp" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 12 (R$ 18,00)." target="_blank">Pedir no WhatsApp</a>
+                <div class="upsell">
+                    Adicione um Guaraná Antarctica por +R$ 8,00!
+                </div>
             </div>
         </div>
+
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5461.jpeg" alt="Combo Yume 18: com hossomaki, hot rolls e uramaki de salmão">
+            <div class="item-info">
+                <h3>Combo Yume 18</h3>
+                <p>4 hossomaki kani, 6 hot rolls, 4 hossomakis camarão, 4 uramaki salmão</p>
+                <div class="price">R$ 27,00</div>
+                <a class="btn-whatsapp" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 18 (R$ 27,00)." target="_blank">Pedir no WhatsApp</a>
+                <div class="upsell">
+                    Adicione um Guaraná Antarctica por +R$ 8,00!
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5472.jpeg" alt="Combo Yume 24 com 4 tipos de sushis variados">
+            <div class="item-info">
+                <h3>Combo Yume 24</h3>
+                <p>4 uramakis atum, 6 hot rolls, 6 hossomakis camarão, 4 hossomaki kani, 4 uramaki salmão</p>
+                <div class="price">R$ 36,00</div>
+                <a class="btn-whatsapp" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 24 (R$ 36,00)." target="_blank">Pedir no WhatsApp</a>
+                <div class="upsell">
+                    Adicione um Guaraná Antarctica por +R$ 8,00!
+                </div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5462.jpeg" alt="Combo Yume 30 para compartilhar com 5 tipos de sushis">
+            <div class="item-info">
+                <h3>Combo Yume 30</h3>
+                <p>6 uramakis atum, 8 hot rolls, 8 hossomakis camarão, 6 hossomaki kani, 4 uramaki salmão</p>
+                <div class="price">R$ 45,00</div>
+                <a class="btn-whatsapp" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 30 (R$ 45,00)." target="_blank">Pedir no WhatsApp</a>
+                <div class="upsell">
+                    Adicione um Guaraná Antarctica por +R$ 8,00!
+                </div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5469.webp" alt="Garrafa de Guaraná Antártica de 1 Litro">
+            <div class="item-info">
+                <h3>Refrigerante Guaraná Antártica</h3>
+                <p>Geladinho! Garrafa de 1 litro.</p>
+                <div class="price">R$ 8,00</div>
+                <a class="btn-whatsapp" href="https://wa.me/5584991044358?text=Olá! Quero um refrigerante geladinho por R$ 8,00." target="_blank">Pedir no WhatsApp</a>
+            </div>
+        </div>
+
     </div>
-</section>
+</main>
 
 <section class="testimonials">
     <h2>⭐ O que nossos clientes dizem</h2>
     <blockquote>
-        "O melhor sushi que já comi! Rápido e delicioso!"<br>
+        "Atendimento excelente e o sushi é simplesmente incrível, sempre fresco e saboroso. Super recomendo!"<br>
         <cite>- Ana S.</cite>
     </blockquote>
     <blockquote>
-        "Preço justo e qualidade impecável. Virou meu lugar favorito!"<br>
+        "Preço justo e qualidade impecável. A entrega foi super rápida. Virou meu lugar favorito para pedir sushi!"<br>
         <cite>- Lucas M.</cite>
     </blockquote>
+    <blockquote>
+        "Os hot rolls são os melhores que já provei! E o combo é perfeito para duas pessoas. Nota 10!"<br>
+        <cite>- Camila L.</cite>
+    </blockquote>
 </section>
+
+<footer>
+    <p>&copy; 2025 Yume Sushi. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
