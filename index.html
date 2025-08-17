@@ -1,182 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yume Sushi - Catálogo</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #fff;
-        color: #222;
-    }
-    header {
-        background: #fff;
-        color: white;
-        text-align: center;
-        padding: 10px;
-    }
-    header img {
-        max-height: 80px;
-    }
-    .hero {
-        background: #eee;
-        padding: 10px;
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.4em;
-    }
-    .payment-options {
-        background: #f8f8f8;
-        padding: 15px 20px;
-        text-align: center;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        margin: 15px 0;
-    }
-    .payment-options h4 {
-        margin-top: 0;
-        margin-bottom: 10px;
-        color: #c00;
-    }
-    .payment-options .item-payment {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        margin-bottom: 5px;
-    }
-    .payment-options .item-payment span {
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-    .item {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        overflow: hidden;
-    }
-    .item img {
-        width: 100%;
-        display: block;
-    }
-    .item-info {
-        padding: 15px;
-    }
-    .item-info h3 {
-        margin: 0 0 5px;
-        color: #c00;
-    }
-    .item-info p {
-        margin: 5px 0;
-        color: #555;
-    }
-    .price {
-        font-weight: bold;
-        margin: 8px 0;
-        font-size: 18px;
-        color: #000;
-    }
-    .btn {
-        display: block;
-        text-align: center;
-        background: #c00;
-        color: white;
-        padding: 12px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 6px;
-        margin-top: 10px;
-    }
-    .btn:hover {
-        background: #a00;
-    }
-</style>
-</head>
-<body>
-
-<header>
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/4AAD4C8B-CB1B-4CE1-A18C-8B6866D4EDB8.png" alt="Logo Yume Sushi">
-</header>
-
-<div class="hero">
-    <strong>Horário:</strong> Todos os dias — 19h às 23h | 
-    <strong>Taxa de entrega:</strong> Grátis para Cidade Verde e Cidade Oeste, demais bairros R$ 5,00
-</div>
-
-<div style="display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; padding: 0 20px;">
-  <a href="tel:+5584991044358" style="flex:1; text-align:center; text-decoration:none; background:#111; color:#fff; padding:12px 16px; border-radius:999px; font-weight:700;">📞 Ligar Agora</a>
-  <a href="https://www.google.com/maps/search/?api=1&query=Yume+Sushi" target="_blank" style="flex:1; text-align:center; text-decoration:none; background:#444; color:#fff; padding:12px 16px; border-radius:999px; font-weight:700;">📍 Ver no Mapa</a>
-</div>
-
-<section class="payment-options">
-    <h4>Formas de Pagamento</h4>
-    <div class="item-payment">
-        <span>✅</span>
-        <p>Pix</p>
-    </div>
-    <div class="item-payment">
-        <span>💳</span>
-        <p>Cartão (Débito ou Crédito)</p>
-    </div>
-    <div class="item-payment">
-        <span>💰</span>
-        <p>Dinheiro</p>
-    </div>
-</section>
-
 <section class="menu">
-<div class="item">
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/refs/heads/main/IMG_5470.jpeg" alt="Combo Yume 12">
-    <div class="item-info">
-        <h3>Combo Yume 12</h3>
-        <p>4 uramakis atum, 4 hot rolls tilápia, 4 hossomakis kani</p>
-        <div class="price">R$ 18,00</div>
-        <a class="btn" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 12 por R$ 18,00." target="_blank">Pedir no WhatsApp</a>
+    <h2>🍣 Combos Especiais</h2>
+    <div class="item">
+        <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/refs/heads/main/IMG_5470.jpeg" alt="Delicioso Combo Yume 12 com salmão e atum">
+        <div class="item-info">
+            <h3>Combo Yume 12 ✨</h3>
+            <p>4 uramakis atum, 4 hot rolls tilápia, 4 hossomakis kani</p>
+            <div class="price">R$ 18,00</div>
+            <a class="btn" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 12 por R$ 18,00." target="_blank">Pedir no WhatsApp</a>
+            <div class="upsell">
+                <p>💡 Recomendado: Adicione um Guaraná Antártica por apenas R$ 8!</p>
+            </div>
+        </div>
     </div>
-</div>
-<div class="item">
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5461.jpeg" alt="Combo Yume 20">
-    <div class="item-info">
-        <h3>Combo Yume 18</h3>
-        <p>4 hossomaki kani, 6 hot rolls, 4 hossomakis camarão, 4 uramaki salmão</p>
-        <div class="price">R$ 27,00</div>
-        <a class="btn" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 18 por R$ 27,00." target="_blank">Pedir no WhatsApp</a>
-    </div>
-</div>
-<div class="item">
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5472.jpeg" alt="Combo Yume 24">
-    <div class="item-info">
-        <h3>Combo Yume 24</h3>
-        <p>4 uramakis atum, 6 hot rolls, 6 hossomakis camarão, 4 hossomaki kani, 4 uramaki salmão</p>
-        <div class="price">R$ 36,00</div>
-        <a class="btn" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 24 por R$ 36,00." target="_blank">Pedir no WhatsApp</a>
-    </div>
-</div>
-<div class="item">
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5462.jpeg" alt="Combo Yume 30">
-    <div class="item-info">
-        <h3>Combo Yume 30</h3>
-        <p>6 uramakis atum, 8 hot rolls, 8 hossomakis camarão, 6 hossomaki kani, 4 uramaki salmão</p>
-        <div class="price">R$ 45,00</div>
-        <a class="btn" href="https://wa.me/5584991044358?text=Olá! Quero pedir o Combo Yume 30 por R$ 45,00." target="_blank">Pedir no WhatsApp</a>
-    </div>
-<div class="item">
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5469.webp" alt="Guaraná Antártica 1L">
-    <div class="item-info">
-        <h3>Refrigerante Guaraná Antártica Original 1 LITRO</h3>
-        <p>1 Litro</p>
-        <div class="price">R$ 8,00</div>
-        <a class="btn" href="https://wa.me/5584991044358?text=Olá! Quero um refrigerante geladinho por R$ 8,00." target="_blank">Pedir no WhatsApp</a>
-    </div>
-</div>
 </section>
-</body>
-</html>
+
+<section class="testimonials">
+    <h2>⭐ O que nossos clientes dizem</h2>
+    <blockquote>
+        "O melhor sushi que já comi! Rápido e delicioso!"<br>
+        <cite>- Ana S.</cite>
+    </blockquote>
+    <blockquote>
+        "Preço justo e qualidade impecável. Virou meu lugar favorito!"<br>
+        <cite>- Lucas M.</cite>
+    </blockquote>
+</section>
