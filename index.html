@@ -436,23 +436,21 @@
             </div>
         </div>
 
-        <div class="item" data-id="combo24" data-name="Combo Yume 24" data-price="36.00" data-promo="true">
-            <div class="promo-badge">PROMOÇÃO!</div>
+        <div class="item" data-id="combo24" data-name="Combo Yume 24" data-price="36.00">
             <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5472.jpeg" alt="Combo Yume 24 com 4 tipos de sushis variados">
             <div class="item-info">
-                <h3>Combo Yume 24 + Guaraná</h3>
-                <p>4 uramakis atum, 6 hot rolls, 6 hossomakis camarão, 4 hossomaki kani, 4 uramaki salmão + *Guaraná Grátis*</p>
+                <h3>Combo Yume 24</h3>
+                <p>4 uramakis atum, 6 hot rolls, 6 hossomakis camarão, 4 hossomaki kani, 4 uramaki salmão</p>
                 <div class="price">R$ 36,00</div>
                 <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
             </div>
         </div>
         
-        <div class="item" data-id="combo30" data-name="Combo Yume 30" data-price="45.00" data-promo="true">
-            <div class="promo-badge">PROMOÇÃO!</div>
+        <div class="item" data-id="combo30" data-name="Combo Yume 30" data-price="45.00">
             <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5462.jpeg" alt="Combo Yume 30 para compartilhar com 5 tipos de sushis">
             <div class="item-info">
-                <h3>Combo Yume 30 + Guaraná</h3>
-                <p>6 uramakis atum, 8 hot rolls, 8 hossomakis camarão, 6 hossomaki kani, 4 uramaki salmão + *Guaraná Grátis*</p>
+                <h3>Combo Yume 30</h3>
+                <p>6 uramakis atum, 8 hot rolls, 8 hossomakis camarão, 6 hossomaki kani, 4 uramaki salmão</p>
                 <div class="price">R$ 45,00</div>
                 <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
             </div>
@@ -571,16 +569,10 @@
 
     setInterval(updateStoreStatus, 1000); // Atualiza a cada 1 segundo
 
-    // --- Lógica do Carrinho de Compras (mantida do código anterior) ---
+    // --- Lógica do Carrinho de Compras (com alterações) ---
     let cart = [];
     
-    const promoItems = {
-        'refri-promo': {
-            id: 'refri-promo',
-            name: 'Guaraná Antarctica 1L (Brinde)',
-            price: 0
-        }
-    };
+    // ALTERAÇÃO: Removido o objeto 'promoItems' pois não é mais necessário
     
     const cartButton = document.getElementById('cart-button');
     const cartContent = document.getElementById('cart-content');
@@ -590,12 +582,9 @@
     const checkoutButton = document.getElementById('checkout-button');
 
     function addToCart(item) {
-        const existingItem = cart.find(i => i.id === item.id && i.price > 0);
+        const existingItem = cart.find(i => i.id === item.id); // ALTERAÇÃO: Simplificado
         
-        if (item.isPromo) {
-            cart.push({ ...item, quantity: 1, isPromo: false });
-            cart.push({ ...promoItems['refri-promo'], quantity: 1 });
-        } else if (existingItem) {
+        if (existingItem) {
             existingItem.quantity++;
         } else {
             cart.push({ ...item, quantity: 1 });
@@ -660,8 +649,8 @@
             const item = {
                 id: itemElement.dataset.id,
                 name: itemElement.dataset.name,
-                price: parseFloat(itemElement.dataset.price),
-                isPromo: itemElement.dataset.promo === 'true'
+                price: parseFloat(itemElement.dataset.price)
+                // ALTERAÇÃO: Removida a propriedade 'isPromo'
             };
             addToCart(item);
             cartContent.classList.add('show');
@@ -683,3 +672,4 @@
 
 </body>
 </html>
+
