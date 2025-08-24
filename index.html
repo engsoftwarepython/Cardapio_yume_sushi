@@ -736,4 +736,42 @@
     document.querySelectorAll('.btn-add-to-cart').forEach(button => {
         button.addEventListener('click', (event) => {
             const itemElement = event.target.closest('.item');
-            const item =
+            if (itemElement) {
+                const item = {
+                    id: itemElement.dataset.id,
+                    name: itemElement.dataset.name,
+                    price: parseFloat(itemElement.dataset.price)
+                };
+                addToCart(item);
+            
+                event.target.classList.add('added');
+                setTimeout(() => {
+                    event.target.classList.remove('added');
+                }, 500);
+            }
+        });
+    });
+
+    cartItemsList.addEventListener('click', (event) => {
+        const button = event.target;
+        if (button.tagName === 'BUTTON') {
+            const itemId = button.dataset.id;
+            const action = button.dataset.action;
+
+            if (action === 'increase') {
+                updateQuantity(itemId, 1);
+            } else if (action === 'decrease') {
+                updateQuantity(itemId, -1);
+            }
+        }
+    });
+
+    cartButton.addEventListener('click', () => {
+        cartContent.classList.toggle('show');
+    });
+
+    renderCart();
+</script>
+
+</body>
+</html>
