@@ -4,691 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yume Sushi - Peça Online | Delivery Rápido e Delicioso</title>
-    <meta name="description" content="Yume Sushi: De<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yume Sushi - Peça Online | Delivery Rápido e Delicioso</title>
-    <meta name="description" content="Yume Sushi: Delivery de sushis e combos frescos na Cidade Verde e região. Peça agora pelo WhatsApp e saboreie o melhor da culinária japonesa!">
-    <style>
-        :root {
-            --cor-primaria: #a52a2a; /* Vermelho escuro para destaque */
-            --cor-secundaria: #333; /* Cinza escuro para textos */
-            --cor-fundo: #f9f9f9; /* Fundo claro */
-            --cor-borda: #ddd;
-            --cor-sombra: rgba(0,0,0,0.1);
-        }
-
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            background: var(--cor-fundo);
-            color: var(--cor-secundaria);
-            line-height: 1.6;
-        }
-
-        header {
-            background: #fff;
-            text-align: center;
-            padding: 15px;
-            box-shadow: 0 2px 5px var(--cor-sombra);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header img {
-            max-height: 90px;
-        }
-
-        .hero {
-            background: var(--cor-primaria);
-            color: #fff;
-            padding: 15px 20px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .hero strong {
-            display: block;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-        
-        .buttons-container {
-            display: flex;
-            gap: 15px;
-            margin: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn {
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 15px 20px;
-            border-radius: 999px;
-            flex: 1;
-            min-width: 150px;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn.primary {
-            background: var(--cor-primaria);
-            color: #fff;
-        }
-        
-        .btn.secondary {
-            background: #444;
-            color: #fff;
-        }
-
-        .payment-options {
-            background: #fff;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid var(--cor-borda);
-            border-bottom: 1px solid var(--cor-borda);
-            margin: 20px 0;
-            box-shadow: 0 2px 5px var(--cor-sombra);
-        }
-
-        .payment-options h2 {
-            margin-top: 0;
-            color: var(--cor-primaria);
-        }
-        
-        .payment-options .item-payment {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-        
-        .payment-options .item-payment span {
-            font-size: 20px;
-        }
-
-        .menu, .testimonials {
-            padding: 20px;
-        }
-
-        .menu h2, .testimonials h2 {
-            text-align: center;
-            color: var(--cor-primaria);
-            border-bottom: 2px solid var(--cor-borda);
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
-
-        .menu-grid {
-            display: grid;
-            gap: 25px;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        .item {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px var(--cor-sombra);
-            overflow: hidden;
-            transition: transform 0.3s;
-            position: relative; /* Para posicionar o badge */
-        }
-
-        .item:hover {
-            transform: translateY(-5px);
-        }
-
-        .item .promo-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #ff0000;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9em;
-            transform: rotate(5deg);
-        }
-        
-        .item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .item-info {
-            padding: 20px;
-        }
-
-        .item-info h3 {
-            margin: 0 0 8px;
-            color: var(--cor-primaria);
-        }
-
-        .item-info p {
-            margin: 0 0 10px;
-            color: #555;
-            font-size: 0.95em;
-        }
-
-        .price {
-            font-weight: bold;
-            font-size: 22px;
-            color: var(--cor-secundaria);
-            margin-bottom: 15px;
-        }
-
-        .btn-add-to-cart {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: #25D366; /* Cor do WhatsApp */
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        
-        .btn-add-to-cart:hover {
-            background: #128C7E;
-        }
-
-        .testimonials {
-            background: #f0f0f0;
-            padding: 40px 20px;
-        }
-        
-        .testimonials blockquote {
-            background: #fff;
-            padding: 20px;
-            border-left: 5px solid var(--cor-primaria);
-            margin: 0 auto 20px;
-            max-width: 600px;
-            font-style: italic;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px var(--cor-sombra);
-        }
-        
-        .testimonials blockquote cite {
-            display: block;
-            margin-top: 10px;
-            text-align: right;
-            font-weight: bold;
-            color: #777;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: var(--cor-secundaria);
-            color: #fff;
-            margin-top: 30px;
-        }
-
-        /* --- Estilos do Carrinho --- */
-        #cart-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1001;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        
-        #cart-button {
-            background: var(--cor-primaria);
-            color: white;
-            border: none;
-            border-radius: 999px;
-            padding: 15px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 10px var(--cor-sombra);
-            transition: background-color 0.2s;
-        }
-        
-        #cart-button:hover {
-            background: #8b2424;
-        }
-        
-        #cart-count {
-            background: #fff;
-            color: var(--cor-primaria);
-            border-radius: 50%;
-            padding: 2px 8px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        #cart-content {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            width: 300px;
-            max-height: 400px;
-            overflow-y: auto;
-            margin-top: 10px;
-            padding: 15px;
-            display: none; /* Inicia escondido */
-        }
-        
-        #cart-content.show {
-            display: block;
-        }
-        
-        #cart-items {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        #cart-items li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--cor-borda);
-        }
-        
-        #cart-items li:last-child {
-            border-bottom: none;
-        }
-        
-        .remove-item {
-            background: none;
-            border: none;
-            color: var(--cor-primaria);
-            cursor: pointer;
-            font-size: 1.2em;
-        }
-        
-        #cart-total {
-            font-weight: bold;
-            font-size: 1.2em;
-            text-align: right;
-            margin-top: 15px;
-        }
-        
-        #checkout-button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: #25D366; /* Cor do WhatsApp */
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            margin-top: 15px;
-            transition: background-color 0.2s;
-        }
-        
-        #checkout-button:hover {
-            background: #128C7E;
-        }
-
-        /* --- Estilos de Status da Loja --- */
-        .status-loja {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        .status-loja.aberto {
-            color: #28a745; /* Verde */
-            animation: blinking 1s infinite;
-        }
-
-        .status-loja.fechado {
-            color: #dc3545; /* Vermelho */
-            animation: blinking 1s infinite;
-        }
-
-        .countdown {
-            display: block;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-
-        @keyframes blinking {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-    </style>
-</head>
-<body>
-
-<header>
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/138af0b9-15fa-4b1d-85a5-efd7f4bf7170.jpeg" alt="Logo Yume Sushi, restaurante de sushi">
-</header>
-
-<section class="hero">
-    <strong>Horário de Funcionamento:</strong><br>
-    Todos os dias — 19h às 22h
-    <div class="status-loja">
-        <span id="status-texto"></span>
-        <span id="countdown-timer" class="countdown"></span>
-    </div>
-    <strong>Taxa de Entrega:</strong><br>
-    Grátis para Cidade Verde e Cidade Oeste. Demais bairros R$ 5,00.
-</section>
-
-<div class="buttons-container">
-    <a href="tel:+5584991044358" class="btn primary">📞 Ligar Agora</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Yume+Sushi" target="_blank" class="btn secondary">📍 Ver no Mapa</a>
-</div>
-
-<section class="payment-options">
-    <h2>Formas de Pagamento</h2>
-    <div class="item-payment"><span>✅</span> <p>Pix</p></div>
-    <div class="item-payment"><span>💳</span> <p>Cartão (Débito ou Crédito)</p></div>
-    <div class="item-payment"><span>💰</span> <p>Dinheiro</p></div>
-</section>
-
-<main class="menu">
-    <h2>🍣 Combos Especiais</h2>
-    <div class="menu-grid">
-
-        <div class="item" data-id="temakiyume" data-name="Temaki Yume" data-price="21.90">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5485.jpeg" alt="Combo Yume 12: 4 uramakis atum, 4 hot rolls tilápia, 4 hossomakis kani">
-            <div class="item-info">
-                <h3>Temaki Yume</h3>
-                <p>Temaki de Salmão e Cream Cheese</p>
-                <div class="price">R$ 21,90</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-       <div class="item" data-id="combo8" data-name="Combo Yume 8" data-price="12.00">
-           <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5498.jpeg" alt="Combo Yume 8: 2 uramakis atum, 2 hot rolls, 2 hossomakis kani">
-           <div class="item-info">
-               <h3>Combo Yume 8</h3>
-               <p>8 Hot rolls</p>
-               <div class="price">R$ 12,00</div>
-               <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-        
-        <div class="item" data-id="combo12" data-name="Combo Yume 12" data-price="18.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5470.jpeg" alt="Combo Yume 12: 4 uramakis atum, 4 hot rolls, 4 hossomakis kani">
-            <div class="item-info">
-                <h3>Combo Yume 12</h3>
-                <p>4 uramakis de atum, 4 hot rolls, 4 hossomakis de kani</p>
-                <div class="price">R$ 18,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="combo18" data-name="Combo Yume 18" data-price="27.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5461.jpeg" alt="Combo Yume 18: com hossomaki, hot rolls e uramaki de salmão">
-            <div class="item-info">
-                <h3>Combo Yume 18</h3>
-                <p>4 hossomaki kani, 6 hot rolls, 4 hossomakis camarão, 4 uramaki salmão</p>
-                <div class="price">R$ 27,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="combo24" data-name="Combo Yume 24" data-price="36.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5472.jpeg" alt="Combo Yume 24 com 4 tipos de sushis variados">
-            <div class="item-info">
-                <h3>Combo Yume 24</h3>
-                <p>4 uramakis atum, 6 hot rolls, 6 hossomakis camarão, 4 hossomaki kani, 4 uramaki salmão</p>
-                <div class="price">R$ 36,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-        
-        <div class="item" data-id="combo30" data-name="Combo Yume 30" data-price="45.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5462.jpeg" alt="Combo Yume 30 para compartilhar com 5 tipos de sushis">
-            <div class="item-info">
-                <h3>Combo Yume 30</h3>
-                <p>6 uramakis atum, 8 hot rolls, 8 hossomakis camarão, 6 hossomaki kani, 4 uramaki salmão</p>
-                <div class="price">R$ 45,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-        
-        <div class="item" data-id="refri" data-name="Guaraná Antarctica 1L" data-price="8.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5469.webp" alt="Garrafa de Guaraná Antártica de 1 Litro">
-            <div class="item-info">
-                <h3>Refrigerante Guaraná Antártica</h3>
-                <p>Geladinho! Garrafa de 1 litro.</p>
-                <div class="price">R$ 8,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="refri" data-name="Coca-Cola 1L" data-price="10.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5488.jpeg" alt="Coca-Cola de 1 Litro">
-            <div class="item-info">
-                <h3>Refrigerante Coca-Cola</h3>
-                <p>Geladinha! Garrafa de 1 litro.</p>
-                <div class="price">R$ 10,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="refri" data-name="Coca-Cola Zero 1L" data-price="10.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5487.png" alt="Coca-Cola Zero de 1 Litro">
-            <div class="item-info">
-                <h3>Refrigerante Coca-Cola Zero</h3>
-                <p>Geladinha! Garrafa de 1 litro.</p>
-                <div class="price">R$ 10,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </div>
-</main>
-
-<section class="testimonials">
-    <h2>⭐ O que nossos clientes dizem</h2>
-    <blockquote>
-        "Atendimento excelente e o sushi é simplesmente incrível, sempre fresco e saboroso. Super recomendo!"<br>
-        <cite>- Ana S.</cite>
-    </blockquote>
-    <blockquote>
-        "Preço justo e qualidade impecável. A entrega foi super rápida. Virou meu lugar favorito para pedir sushi!"<br>
-        <cite>- Lucas M.</cite>
-    </blockquote>
-    <blockquote>
-        "Os hot rolls são os melhores que já provei! E o combo é perfeito para duas pessoas. Nota 10!"<br>
-        <cite>- Camila L.</cite>
-    </blockquote>
-</section>
-
-<footer>
-    <p>© 2025 Yume Sushi. Todos os direitos reservados.</p>
-</footer>
-
-<aside id="cart-container">
-    <button id="cart-button">
-        🛒 Meu Carrinho (<span id="cart-count">0</span>)
-    </button>
-    <div id="cart-content">
-        <h3>Seu Pedido</h3>
-        <ul id="cart-items">
-            </ul>
-        <div id="cart-total">
-            Total: R$ 0,00
-        </div>
-        <a id="checkout-button" href="#" target="_blank">Finalizar Pedido</a>
-    </div>
-</aside>
-
-<script>
-    // --- Lógica do Status da Loja ---
-    function updateStoreStatus() {
-        const now = new Date();
-        const openingHour = 19; // 19:00
-        const closingHour = 22; // 22:00
-
-        const currentHour = now.getHours();
-        const currentMinute = now.getMinutes();
-        const currentSecond = now.getSeconds();
-
-        const statusTexto = document.getElementById('status-texto');
-        const countdownTimer = document.getElementById('countdown-timer');
-        const statusDiv = document.querySelector('.status-loja');
-
-        if (currentHour >= openingHour && currentHour < closingHour) {
-            // A loja está aberta
-            statusTexto.textContent = 'ABERTO';
-            statusDiv.classList.add('aberto');
-            statusDiv.classList.remove('fechado');
-            countdownTimer.textContent = '';
-        } else {
-            // A loja está fechada
-            statusTexto.textContent = 'FECHADO';
-            statusDiv.classList.add('fechado');
-            statusDiv.classList.remove('aberto');
-
-            let nextOpening = new Date();
-            nextOpening.setHours(openingHour, 0, 0, 0);
-
-            // Se já passou das 19h de hoje, a próxima abertura é amanhã
-            if (now.getTime() > nextOpening.getTime()) {
-                nextOpening.setDate(nextOpening.getDate() + 1);
-            }
-
-            const diff = nextOpening.getTime() - now.getTime();
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            countdownTimer.textContent = `Abre em: ${hours}h ${minutes}m ${seconds}s`;
-        }
-    }
-
-    setInterval(updateStoreStatus, 1000); // Atualiza a cada 1 segundo
-
-    // --- Lógica do Carrinho de Compras (com alterações) ---
-    let cart = [];
-    
-    // ALTERAÇÃO: Removido o objeto 'promoItems' pois não é mais necessário
-    
-    const cartButton = document.getElementById('cart-button');
-    const cartContent = document.getElementById('cart-content');
-    const cartCount = document.getElementById('cart-count');
-    const cartItemsList = document.getElementById('cart-items');
-    const cartTotalElement = document.getElementById('cart-total');
-    const checkoutButton = document.getElementById('checkout-button');
-
-    function addToCart(item) {
-        const existingItem = cart.find(i => i.id === item.id); // ALTERAÇÃO: Simplificado
-        
-        if (existingItem) {
-            existingItem.quantity++;
-        } else {
-            cart.push({ ...item, quantity: 1 });
-        }
-        renderCart();
-    }
-    
-    function removeFromCart(itemId) {
-        cart = cart.filter(item => item.id !== itemId);
-        renderCart();
-    }
-
-    function renderCart() {
-        cartItemsList.innerHTML = '';
-        let total = 0;
-
-        cart.forEach(item => {
-            const li = document.createElement('li');
-            const itemPrice = item.price * item.quantity;
-            total += itemPrice;
-            li.innerHTML = `
-                <span>${item.name} (${item.quantity}x)</span>
-                <span>R$ ${itemPrice.toFixed(2).replace('.', ',')}</span>
-                <button class="remove-item" data-id="${item.id}">×</button>
-            `;
-            cartItemsList.appendChild(li);
-        });
-
-        cartTotalElement.textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
-        updateCartCount();
-        checkoutButton.href = generateWhatsAppMessage();
-        
-        if (cart.length === 0) {
-            cartContent.classList.remove('show');
-        }
-    }
-
-    function updateCartCount() {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-    }
-
-    function generateWhatsAppMessage() {
-        if (cart.length === 0) {
-            return '#';
-        }
-        let message = "Olá! Gostaria de fazer o seguinte pedido:\n\n";
-        let total = 0;
-
-        cart.forEach(item => {
-            message += `- ${item.name} (${item.quantity}x) - R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
-            total += item.price * item.quantity;
-        });
-
-        message += `\nTotal do Pedido: R$ ${total.toFixed(2).replace('.', ',')}`;
-        return `https://wa.me/5584991044358?text=${encodeURIComponent(message)}`;
-    }
-
-    document.querySelectorAll('.btn-add-to-cart').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const itemElement = event.target.closest('.item');
-            const item = {
-                id: itemElement.dataset.id,
-                name: itemElement.dataset.name,
-                price: parseFloat(itemElement.dataset.price)
-                // ALTERAÇÃO: Removida a propriedade 'isPromo'
-            };
-            addToCart(item);
-            cartContent.classList.add('show');
-        });
-    });
-
-    cartItemsList.addEventListener('click', (event) => {
-        if (event.target.classList.contains('remove-item')) {
-            const itemId = event.target.dataset.id;
-            removeFromCart(itemId);
-        }
-    });
-
-    cartButton.addEventListener('click', () => {
-        cartContent.classList.toggle('show');
-    });
-
-</script>
-
-</body>
-</html>
-livery de sushis e combos frescos na Cidade Verde e região. Peça agora pelo WhatsApp e saboreie o melhor da culinária japonesa!">
+    <meta name="description" content="Yume Sushi: Delivery de sushis e combos frescos na Cidade Verde e região. Peça agora pelo WhatsApp e saboreie o melhor da culinária japonesa!">
     <style>
         :root {
             --cor-primaria: #a52a2a; /* Vermelho escuro para destaque */
@@ -715,7 +31,7 @@ livery de sushis e combos frescos na Cidade Verde e região. Peça agora pelo Wh
             top: 0;
             z-index: 1000;
         }
-        
+
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -728,14 +44,14 @@ livery de sushis e combos frescos na Cidade Verde e região. Peça agora pelo Wh
             background-image: url('https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/Gemini_Generated_Image_zh0ntxzh0ntxzh0n.png');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain; /* Para manter a proporção e cobrir o espaço */
-            min-height: 200px; /* Ajuste a altura conforme necessário */
-            display: flex; /* Para centralizar o texto (se houver) */
+            background-size: contain;
+            min-height: 200px;
+            display: flex;
             align-items: center;
-            justify-content: center; /* Centraliza o conteúdo horizontalmente */
-            padding: 20px; /* Adiciona um pouco de espaço ao redor */
+            justify-content: center;
+            padding: 20px;
         }
-        
+
         .fixed-header a {
             display: none;
         }
@@ -865,3 +181,512 @@ livery de sushis e combos frescos na Cidade Verde e região. Peça agora pelo Wh
         }
 
         .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-info {
+            padding: 20px;
+        }
+
+        .item-info h3 {
+            margin: 0 0 8px;
+            color: var(--cor-primaria);
+        }
+
+        .item-info p {
+            margin: 0 0 10px;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 22px;
+            color: var(--cor-secundaria);
+            margin-bottom: 15px;
+        }
+
+        .btn-add-to-cart {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        
+        .btn-add-to-cart:hover {
+            background: #128C7E;
+        }
+        
+        .btn-add-to-cart.added {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        .testimonials {
+            background: #f0f0f0;
+            padding: 40px 20px;
+        }
+        
+        .testimonials blockquote {
+            background: #fff;
+            padding: 20px;
+            border-left: 5px solid var(--cor-primaria);
+            margin: 0 auto 20px;
+            max-width: 600px;
+            font-style: italic;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--cor-sombra);
+        }
+        
+        .testimonials blockquote cite {
+            display: block;
+            margin-top: 10px;
+            text-align: right;
+            font-weight: bold;
+            color: #777;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--cor-secundaria);
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        /* --- Estilos do Carrinho --- */
+        #cart-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        #cart-button {
+            background: var(--cor-primaria);
+            color: white;
+            border: none;
+            border-radius: 999px;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px var(--cor-sombra);
+            transition: background-color 0.2s;
+        }
+        
+        #cart-button:hover {
+            background: #8b2424;
+        }
+        
+        #cart-count {
+            background: #fff;
+            color: var(--cor-primaria);
+            border-radius: 50%;
+            padding: 2px 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #cart-content {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 10px;
+            padding: 15px;
+            display: none;
+        }
+        
+        #cart-content.show {
+            display: block;
+        }
+        
+        #cart-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #cart-items li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--cor-borda);
+        }
+        
+        #cart-items li:last-child {
+            border-bottom: none;
+        }
+
+        .item-info-cart {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .item-name-cart {
+            font-weight: bold;
+        }
+
+        .item-price-cart {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .item-quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .item-quantity-control button {
+            background: var(--cor-borda);
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        
+        #cart-total {
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: right;
+            margin-top: 15px;
+        }
+        
+        #checkout-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        
+        #checkout-button:hover {
+            background: #128C7E;
+        }
+
+        /* --- Estilos de Status da Loja --- */
+        .status-loja {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .status-loja.aberto {
+            color: #28a745;
+            animation: blinking 1s infinite;
+        }
+
+        .status-loja.fechado {
+            color: #dc3545;
+            animation: blinking 1s infinite;
+        }
+
+        .countdown {
+            display: block;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        @keyframes blinking {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="fixed-header">
+    <div class="header-content" id="header-image">
+        <a href="/"></a>
+        <div class="header-actions">
+            <a href="tel:+5584991044358" class="phone-link">📞 Ligar Agora</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <strong>Horário de Funcionamento:</strong><br>
+    Todos os dias — 19h às 22h
+    <div class="status-loja">
+        <span id="status-texto"></span>
+        <span id="countdown-timer" class="countdown"></span>
+    </div>
+    <strong>Taxa de Entrega:</strong><br>
+    Grátis para Cidade Verde e Cidade Oeste. Demais bairros R$ 5,00.
+</section>
+
+<div class="buttons-container">
+    <a href="tel:+5584991044358" class="btn primary">📞 Ligar Agora</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Yume+Sushi" target="_blank" class="btn secondary">📍 Ver no Mapa</a>
+</div>
+
+<section class="payment-options">
+    <h2>Formas de Pagamento</h2>
+    <div class="item-payment"><span>✅</span> <p>Pix</p></div>
+    <div class="item-payment"><span>💳</span> <p>Cartão (Débito ou Crédito)</p></div>
+    <div class="item-payment"><span>💰</span> <p>Dinheiro</p></div>
+</section>
+
+<main class="menu">
+    <h2>🍣 Combos Especiais</h2>
+    <div class="menu-grid">
+
+        <div class="item" data-id="temakiyume" data-name="Temaki Yume" data-price="21.90">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5485.jpeg" alt="Combo Yume 12: 4 uramakis atum, 4 hot rolls tilápia, 4 hossomakis kani">
+            <div class="item-info">
+                <h3>Temaki Yume</h3>
+                <p>Temaki de Salmão e Cream Cheese</p>
+                <div class="price">R$ 21,90</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+       <div class="item" data-id="combo8" data-name="Combo Yume 8" data-price="12.00">
+           <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5498.jpeg" alt="Combo Yume 8: 2 uramakis atum, 2 hot rolls, 2 hossomakis kani">
+           <div class="item-info">
+               <h3>Combo Yume 8</h3>
+               <p>8 Hot rolls</p>
+               <div class="price">R$ 12,00</div>
+               <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        
+        <div class="item" data-id="combo12" data-name="Combo Yume 12" data-price="18.00">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5470.jpeg" alt="Combo Yume 12: 4 uramakis atum, 4 hot rolls, 4 hossomakis kani">
+            <div class="item-info">
+                <h3>Combo Yume 12</h3>
+                <p>4 uramakis de atum, 4 hot rolls, 4 hossomakis de kani</p>
+                <div class="price">R$ 18,00</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="item" data-id="combo18" data-name="Combo Yume 18" data-price="27.00">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5461.jpeg" alt="Combo Yume 18: com hossomaki, hot rolls e uramaki de salmão">
+            <div class="item-info">
+                <h3>Combo Yume 18</h3>
+                <p>4 hossomaki kani, 6 hot rolls, 4 hossomakis camarão, 4 uramaki salmão</p>
+                <div class="price">R$ 27,00</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="item" data-id="combo24" data-name="Combo Yume 24" data-price="36.00">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5472.jpeg" alt="Combo Yume 24 com 4 tipos de sushis variados">
+            <div class="item-info">
+                <h3>Combo Yume 24</h3>
+                <p>4 uramakis atum, 6 hot rolls, 6 hossomakis camarão, 4 hossomaki kani, 4 uramaki salmão</p>
+                <div class="price">R$ 36,00</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        
+        <div class="item" data-id="combo30" data-name="Combo Yume 30" data-price="45.00">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5462.jpeg" alt="Combo Yume 30 para compartilhar com 5 tipos de sushis">
+            <div class="item-info">
+                <h3>Combo Yume 30</h3>
+                <p>6 uramakis atum, 8 hot rolls, 8 hossomakis camarão, 6 hossomaki kani, 4 uramaki salmão</p>
+                <div class="price">R$ 45,00</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        
+        <div class="item" data-id="guarana" data-name="Guaraná Antarctica 1L" data-price="8.00">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5469.webp" alt="Garrafa de Guaraná Antártica de 1 Litro">
+            <div class="item-info">
+                <h3>Refrigerante Guaraná Antártica</h3>
+                <p>Geladinho! Garrafa de 1 litro.</p>
+                <div class="price">R$ 8,00</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="item" data-id="coca-cola" data-name="Coca-Cola 1L" data-price="10.00">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5488.jpeg" alt="Coca-Cola de 1 Litro">
+            <div class="item-info">
+                <h3>Refrigerante Coca-Cola</h3>
+                <p>Geladinha! Garrafa de 1 litro.</p>
+                <div class="price">R$ 10,00</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="item" data-id="coca-cola-zero" data-name="Coca-Cola Zero 1L" data-price="10.00">
+            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5487.png" alt="Coca-Cola Zero de 1 Litro">
+            <div class="item-info">
+                <h3>Refrigerante Coca-Cola Zero</h3>
+                <p>Geladinha! Garrafa de 1 litro.</p>
+                <div class="price">R$ 10,00</div>
+                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section class="testimonials">
+    <h2>⭐ O que nossos clientes dizem</h2>
+    <blockquote>
+        "Atendimento excelente e o sushi é simplesmente incrível, sempre fresco e saboroso. Super recomendo!"<br>
+        <cite>- Ana S.</cite>
+    </blockquote>
+    <blockquote>
+        "Preço justo e qualidade impecável. A entrega foi super rápida. Virou meu lugar favorito para pedir sushi!"<br>
+        <cite>- Lucas M.</cite>
+    </blockquote>
+    <blockquote>
+        "Os hot rolls são os melhores que já provei! E o combo é perfeito para duas pessoas. Nota 10!"<br>
+        <cite>- Camila L.</cite>
+    </blockquote>
+</section>
+
+<footer>
+    <p>© 2025 Yume Sushi. Todos os direitos reservados.</p>
+</footer>
+
+<aside id="cart-container">
+    <button id="cart-button">
+        🛒 Meu Carrinho (<span id="cart-count">0</span>)
+    </button>
+    <div id="cart-content">
+        <h3>Seu Pedido</h3>
+        <ul id="cart-items">
+            </ul>
+        <div id="cart-total">
+            Total: R$ 0,00
+        </div>
+        <a id="checkout-button" href="#" target="_blank">Finalizar Pedido</a>
+    </div>
+</aside>
+
+<script>
+    // --- Lógica do Status da Loja ---
+    function updateStoreStatus() {
+        const now = new Date();
+        const openingHour = 19; // 19:00
+        const closingHour = 22; // 22:00
+
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
+        const currentSecond = now.getSeconds();
+
+        const statusTexto = document.getElementById('status-texto');
+        const countdownTimer = document.getElementById('countdown-timer');
+        const statusDiv = document.querySelector('.status-loja');
+
+        if (currentHour >= openingHour && currentHour < closingHour) {
+            statusTexto.textContent = 'ABERTO';
+            statusDiv.classList.add('aberto');
+            statusDiv.classList.remove('fechado');
+            countdownTimer.textContent = '';
+        } else {
+            statusTexto.textContent = 'FECHADO';
+            statusDiv.classList.add('fechado');
+            statusDiv.classList.remove('aberto');
+
+            let nextOpening = new Date();
+            nextOpening.setHours(openingHour, 0, 0, 0);
+
+            if (now.getTime() > nextOpening.getTime()) {
+                nextOpening.setDate(nextOpening.getDate() + 1);
+            }
+
+            const diff = nextOpening.getTime() - now.getTime();
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            countdownTimer.textContent = `Abre em: ${hours}h ${minutes}m ${seconds}s`;
+        }
+    }
+
+    setInterval(updateStoreStatus, 1000);
+
+    // --- Lógica do Carrinho de Compras (melhorada) ---
+    let cart = [];
+    
+    const cartButton = document.getElementById('cart-button');
+    const cartContent = document.getElementById('cart-content');
+    const cartCount = document.getElementById('cart-count');
+    const cartItemsList = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
+    const checkoutButton = document.getElementById('checkout-button');
+
+    function addToCart(item) {
+        const existingItem = cart.find(i => i.id === item.id);
+        
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ ...item, quantity: 1 });
+        }
+        renderCart();
+    }
+    
+    function updateQuantity(itemId, change) {
+        const item = cart.find(i => i.id === itemId);
+        if (item) {
+            item.quantity += change;
+            if (item.quantity <= 0) {
+                removeFromCart(itemId);
+            } else {
+                renderCart();
+            }
+        }
+    }
+
+    function removeFromCart(itemId) {
+        cart = cart.filter(item => item.id !== itemId);
+        renderCart();
+    }
+
+    function renderCart() {
+        cartItemsList.innerHTML = '';
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartItemsList.innerHTML = '<li>Seu carrinho está vazio.</li>';
+        }
+
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            const itemPrice = item.price * item.quantity;
+            total += itemPrice;
+            li.innerHTML = `
+                <div class="item-info-cart">
+                    <span class="item-name-cart">${item.name}</span>
