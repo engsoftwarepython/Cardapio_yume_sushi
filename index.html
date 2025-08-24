@@ -22,18 +22,47 @@
             line-height: 1.6;
         }
 
-        header {
+        /* --- Estilos do Novo Cabeçalho --- */
+        .fixed-header {
             background: #fff;
-            text-align: center;
-            padding: 15px;
+            padding: 10px 20px;
             box-shadow: 0 2px 5px var(--cor-sombra);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        header img {
-            max-height: 90px;
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fixed-header img {
+            max-height: 70px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .phone-link {
+            color: var(--cor-primaria);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border: 2px solid var(--cor-primaria);
+            border-radius: 5px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .phone-link:hover {
+            background-color: var(--cor-primaria);
+            color: #fff;
         }
 
         .hero {
@@ -136,33 +165,13 @@
             box-shadow: 0 4px 12px var(--cor-sombra);
             overflow: hidden;
             transition: transform 0.3s;
-            position: relative; /* Para posicionar o badge */
+            position: relative;
         }
 
         .item:hover {
             transform: translateY(-5px);
         }
 
-        .item .badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9em;
-            transform: rotate(5deg);
-        }
-
-        .item .badge.promo {
-            background: #ff0000;
-        }
-
-        .item .badge.best-seller {
-            background: #ffc107; /* Amarelo */
-        }
-        
         .item img {
             width: 100%;
             height: 200px;
@@ -182,7 +191,7 @@
         .item-info p {
             margin: 0 0 10px;
             color: #555;
-            font-size: 1.1em; /* Melhoria: Aumentado o tamanho da fonte */
+            font-size: 1.1em;
         }
 
         .price {
@@ -196,24 +205,23 @@
             display: block;
             width: 100%;
             text-align: center;
-            background: #25D366; /* Cor do WhatsApp */
+            background: #25D366;
             color: white;
             padding: 15px;
             text-decoration: none;
             font-weight: bold;
             border: none;
             cursor: pointer;
-            transition: background-color 0.2s, transform 0.2s; /* Adicionado transição para transform */
+            transition: background-color 0.2s, transform 0.2s;
         }
         
         .btn-add-to-cart:hover {
             background: #128C7E;
         }
         
-        /* Estilo para feedback visual */
         .btn-add-to-cart.added {
             background: #128C7E;
-            transform: scale(1.05); /* Efeito de pulso */
+            transform: scale(1.05);
         }
 
         .testimonials {
@@ -295,463 +303,4 @@
             width: 300px;
             max-height: 400px;
             overflow-y: auto;
-            margin-top: 10px;
-            padding: 15px;
-            display: none; /* Inicia escondido */
-        }
-        
-        #cart-content.show {
-            display: block;
-        }
-        
-        #cart-items {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        #cart-items li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--cor-borda);
-        }
-        
-        #cart-items li:last-child {
-            border-bottom: none;
-        }
-
-        .item-info-cart {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .item-name-cart {
-            font-weight: bold;
-        }
-
-        .item-price-cart {
-            font-size: 0.9em;
-            color: #555;
-        }
-
-        .item-quantity-control {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .item-quantity-control button {
-            background: var(--cor-borda);
-            border: none;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-        
-        #cart-total {
-            font-weight: bold;
-            font-size: 1.2em;
-            text-align: right;
-            margin-top: 15px;
-        }
-        
-        #checkout-button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: #25D366; /* Cor do WhatsApp */
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            margin-top: 15px;
-            transition: background-color 0.2s;
-        }
-        
-        #checkout-button:hover {
-            background: #128C7E;
-        }
-
-        /* --- Estilos de Status da Loja --- */
-        .status-loja {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        .status-loja.aberto {
-            color: #28a745; /* Verde */
-            animation: blinking 1s infinite;
-        }
-
-        .status-loja.fechado {
-            color: #dc3545; /* Vermelho */
-            animation: blinking 1s infinite;
-        }
-
-        .countdown {
-            display: block;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-
-        @keyframes blinking {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-    </style>
-</head>
-<body>
-
-<header>
-    <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/138af0b9-15fa-4b1d-85a5-efd7f4bf7170.jpeg" alt="Logo Yume Sushi, restaurante de sushi">
-</header>
-
-<section class="hero">
-    <strong>Horário de Funcionamento:</strong><br>
-    Todos os dias — 19h às 22h
-    <div class="status-loja">
-        <span id="status-texto"></span>
-        <span id="countdown-timer" class="countdown"></span>
-    </div>
-    <strong>Taxa de Entrega:</strong><br>
-    Grátis para Cidade Verde e Cidade Oeste. Demais bairros R$ 5,00.
-</section>
-
-<div class="buttons-container">
-    <a href="tel:+5584991044358" class="btn primary">📞 Ligar Agora</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Yume+Sushi" target="_blank" class="btn secondary">📍 Ver no Mapa</a>
-</div>
-
-<section class="payment-options">
-    <h2>Formas de Pagamento</h2>
-    <div class="item-payment"><span>✅</span> <p>Pix</p></div>
-    <div class="item-payment"><span>💳</span> <p>Cartão (Débito ou Crédito)</p></div>
-    <div class="item-payment"><span>💰</span> <p>Dinheiro</p></div>
-</section>
-
-<main class="menu">
-    <h2>🍣 Combos Especiais</h2>
-    <div class="menu-grid">
-
-        <div class="item" data-id="temakiyume" data-name="Temaki Yume" data-price="21.90">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5485.jpeg" alt="Combo Yume 12: 4 uramakis atum, 4 hot rolls tilápia, 4 hossomakis kani">
-            <div class="badge best-seller">Mais Vendido</div>
-            <div class="item-info">
-                <h3>Temaki Yume</h3>
-                <p>Temaki de Salmão e Cream Cheese</p>
-                <div class="price">R$ 21,90</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-       <div class="item" data-id="combo8" data-name="Combo Yume 8" data-price="12.00">
-           <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5498.jpeg" alt="Combo Yume 8: 2 uramakis atum, 2 hot rolls, 2 hossomakis kani">
-           <div class="badge promo">Promoção</div>
-           <div class="item-info">
-               <h3>Combo Yume 8</h3>
-               <p>8 Hot rolls</p>
-               <div class="price">R$ 12,00</div>
-               <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-        
-        <div class="item" data-id="combo12" data-name="Combo Yume 12" data-price="18.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5470.jpeg" alt="Combo Yume 12: 4 uramakis atum, 4 hot rolls, 4 hossomakis kani">
-            <div class="item-info">
-                <h3>Combo Yume 12</h3>
-                <p>4 uramakis de atum, 4 hot rolls, 4 hossomakis de kani</p>
-                <div class="price">R$ 18,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="combo18" data-name="Combo Yume 18" data-price="27.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5461.jpeg" alt="Combo Yume 18: com hossomaki, hot rolls e uramaki de salmão">
-            <div class="item-info">
-                <h3>Combo Yume 18</h3>
-                <p>4 hossomaki kani, 6 hot rolls, 4 hossomakis camarão, 4 uramaki salmão</p>
-                <div class="price">R$ 27,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="combo24" data-name="Combo Yume 24" data-price="36.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5472.jpeg" alt="Combo Yume 24 com 4 tipos de sushis variados">
-            <div class="item-info">
-                <h3>Combo Yume 24</h3>
-                <p>4 uramakis atum, 6 hot rolls, 6 hossomakis camarão, 4 hossomaki kani, 4 uramaki salmão</p>
-                <div class="price">R$ 36,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-        
-        <div class="item" data-id="combo30" data-name="Combo Yume 30" data-price="45.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5462.jpeg" alt="Combo Yume 30 para compartilhar com 5 tipos de sushis">
-            <div class="item-info">
-                <h3>Combo Yume 30</h3>
-                <p>6 uramakis atum, 8 hot rolls, 8 hossomakis camarão, 6 hossomaki kani, 4 uramaki salmão</p>
-                <div class="price">R$ 45,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-        
-        <div class="item" data-id="guarana" data-name="Guaraná Antarctica 1L" data-price="8.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5469.webp" alt="Garrafa de Guaraná Antártica de 1 Litro">
-            <div class="item-info">
-                <h3>Refrigerante Guaraná Antártica</h3>
-                <p>Geladinho! Garrafa de 1 litro.</p>
-                <div class="price">R$ 8,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="coca-cola" data-name="Coca-Cola 1L" data-price="10.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5488.jpeg" alt="Coca-Cola de 1 Litro">
-            <div class="badge best-seller">Mais Vendido</div>
-            <div class="item-info">
-                <h3>Refrigerante Coca-Cola</h3>
-                <p>Geladinha! Garrafa de 1 litro.</p>
-                <div class="price">R$ 10,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-
-        <div class="item" data-id="coca-cola-zero" data-name="Coca-Cola Zero 1L" data-price="10.00">
-            <img src="https://raw.githubusercontent.com/engsoftwarepython/Cardapio_yume_sushi/main/IMG_5487.png" alt="Coca-Cola Zero de 1 Litro">
-            <div class="item-info">
-                <h3>Refrigerante Coca-Cola Zero</h3>
-                <p>Geladinha! Garrafa de 1 litro.</p>
-                <div class="price">R$ 10,00</div>
-                <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </div>
-</main>
-
-<section class="testimonials">
-    <h2>⭐ O que nossos clientes dizem</h2>
-    <blockquote>
-        "Atendimento excelente e o sushi é simplesmente incrível, sempre fresco e saboroso. Super recomendo!"<br>
-        <cite>- Ana S.</cite>
-    </blockquote>
-    <blockquote>
-        "Preço justo e qualidade impecável. A entrega foi super rápida. Virou meu lugar favorito para pedir sushi!"<br>
-        <cite>- Lucas M.</cite>
-    </blockquote>
-    <blockquote>
-        "Os hot rolls são os melhores que já provei! E o combo é perfeito para duas pessoas. Nota 10!"<br>
-        <cite>- Camila L.</cite>
-    </blockquote>
-</section>
-
-<footer>
-    <p>© 2025 Yume Sushi. Todos os direitos reservados.</p>
-</footer>
-
-<aside id="cart-container">
-    <button id="cart-button">
-        🛒 Meu Carrinho (<span id="cart-count">0</span>)
-    </button>
-    <div id="cart-content">
-        <h3>Seu Pedido</h3>
-        <ul id="cart-items">
-            </ul>
-        <div id="cart-total">
-            Total: R$ 0,00
-        </div>
-        <a id="checkout-button" href="#" target="_blank">Finalizar Pedido</a>
-    </div>
-</aside>
-
-<script>
-    // --- Lógica do Status da Loja ---
-    function updateStoreStatus() {
-        const now = new Date();
-        const openingHour = 19; // 19:00
-        const closingHour = 22; // 22:00
-
-        const currentHour = now.getHours();
-        const currentMinute = now.getMinutes();
-        const currentSecond = now.getSeconds();
-
-        const statusTexto = document.getElementById('status-texto');
-        const countdownTimer = document.getElementById('countdown-timer');
-        const statusDiv = document.querySelector('.status-loja');
-
-        if (currentHour >= openingHour && currentHour < closingHour) {
-            // A loja está aberta
-            statusTexto.textContent = 'ABERTO';
-            statusDiv.classList.add('aberto');
-            statusDiv.classList.remove('fechado');
-            countdownTimer.textContent = '';
-        } else {
-            // A loja está fechada
-            statusTexto.textContent = 'FECHADO';
-            statusDiv.classList.add('fechado');
-            statusDiv.classList.remove('aberto');
-
-            let nextOpening = new Date();
-            nextOpening.setHours(openingHour, 0, 0, 0);
-
-            // Se já passou das 19h de hoje, a próxima abertura é amanhã
-            if (now.getTime() > nextOpening.getTime()) {
-                nextOpening.setDate(nextOpening.getDate() + 1);
-            }
-
-            const diff = nextOpening.getTime() - now.getTime();
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            countdownTimer.textContent = `Abre em: ${hours}h ${minutes}m ${seconds}s`;
-        }
-    }
-
-    setInterval(updateStoreStatus, 1000); // Atualiza a cada 1 segundo
-
-    // --- Lógica do Carrinho de Compras (melhorada) ---
-    let cart = [];
-    
-    const cartButton = document.getElementById('cart-button');
-    const cartContent = document.getElementById('cart-content');
-    const cartCount = document.getElementById('cart-count');
-    const cartItemsList = document.getElementById('cart-items');
-    const cartTotalElement = document.getElementById('cart-total');
-    const checkoutButton = document.getElementById('checkout-button');
-
-    function addToCart(item) {
-        const existingItem = cart.find(i => i.id === item.id);
-        
-        if (existingItem) {
-            existingItem.quantity++;
-        } else {
-            cart.push({ ...item, quantity: 1 });
-        }
-        renderCart();
-    }
-    
-    function updateQuantity(itemId, change) {
-        const item = cart.find(i => i.id === itemId);
-        if (item) {
-            item.quantity += change;
-            if (item.quantity <= 0) {
-                removeFromCart(itemId);
-            } else {
-                renderCart();
-            }
-        }
-    }
-
-    function removeFromCart(itemId) {
-        cart = cart.filter(item => item.id !== itemId);
-        renderCart();
-    }
-
-    function renderCart() {
-        cartItemsList.innerHTML = '';
-        let total = 0;
-
-        if (cart.length === 0) {
-            cartItemsList.innerHTML = '<li>Seu carrinho está vazio.</li>';
-        }
-
-        cart.forEach(item => {
-            const li = document.createElement('li');
-            const itemPrice = item.price * item.quantity;
-            total += itemPrice;
-            li.innerHTML = `
-                <div class="item-info-cart">
-                    <span class="item-name-cart">${item.name}</span>
-                    <span class="item-price-cart">R$ ${item.price.toFixed(2).replace('.', ',')}</span>
-                </div>
-                <div class="item-quantity-control">
-                    <button data-id="${item.id}" data-action="decrease">-</button>
-                    <span>${item.quantity}</span>
-                    <button data-id="${item.id}" data-action="increase">+</button>
-                </div>
-            `;
-            cartItemsList.appendChild(li);
-        });
-
-        cartTotalElement.textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
-        updateCartCount();
-        checkoutButton.href = generateWhatsAppMessage();
-        
-        if (cart.length > 0) {
-            cartContent.classList.add('show');
-        } else {
-            cartContent.classList.remove('show');
-        }
-    }
-
-    function updateCartCount() {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-    }
-
-    function generateWhatsAppMessage() {
-        if (cart.length === 0) {
-            return '#';
-        }
-        let message = "Olá! Gostaria de fazer o seguinte pedido:\n\n";
-        let total = 0;
-
-        cart.forEach(item => {
-            message += `- ${item.name} (${item.quantity}x) - R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
-            total += item.price * item.quantity;
-        });
-
-        message += `\nTotal do Pedido: R$ ${total.toFixed(2).replace('.', ',')}`;
-        return `https://wa.me/5584991044358?text=${encodeURIComponent(message)}`;
-    }
-
-    document.querySelectorAll('.btn-add-to-cart').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const itemElement = event.target.closest('.item');
-            const item = {
-                id: itemElement.dataset.id,
-                name: itemElement.dataset.name,
-                price: parseFloat(itemElement.dataset.price)
-            };
-            addToCart(item);
-            
-            // Feedback visual no botão
-            event.target.classList.add('added');
-            setTimeout(() => {
-                event.target.classList.remove('added');
-            }, 500);
-        });
-    });
-
-    cartItemsList.addEventListener('click', (event) => {
-        const button = event.target;
-        if (button.tagName === 'BUTTON') {
-            const itemId = button.dataset.id;
-            const action = button.dataset.action;
-
-            if (action === 'increase') {
-                updateQuantity(itemId, 1);
-            } else if (action === 'decrease') {
-                updateQuantity(itemId, -1);
-            }
-        }
-    });
-
-    cartButton.addEventListener('click', () => {
-        cartContent.classList.toggle('show');
-    });
-
-    renderCart(); // Renderiza o carrinho vazio ao carregar a página
-</script>
-
-</body>
-</html>
+            margin-
